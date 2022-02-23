@@ -1,4 +1,4 @@
-// preloader
+// Preloader
 const preloader = document.querySelector(".preloader");
 
 window.addEventListener("load", () => {
@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
   }
 });
 
-// video
+// Video
 const video = document.querySelector(".video-container");
 const videoToggle = document.querySelector(".switch-btn");
 
@@ -41,3 +41,36 @@ function playVideo() {
   video.play();
 }
 playVideo();
+
+// Dynamic open nav menu height
+const navLinksContainer = document.querySelector(".links-container");
+const navLinks = document.querySelector(".links");
+const navToggle = document.querySelector(".nav-toggle");
+
+navToggle.addEventListener("click", () => {
+  if (navLinksContainer.getBoundingClientRect().height === 0) {
+    navLinksContainer.style.height = navLinks.getBoundingClientRect().height + "px";
+  } else {
+    navLinksContainer.style.height = 0 + "px";
+  }
+});
+
+// Show nav on scroll & scroll to top btn
+const nav = document.querySelector("#nav");
+const scrollTopBtn = document.querySelector(".top-link");
+
+window.addEventListener("scroll", function () {
+  var scroll = window.scrollY;
+  if (scroll > 50) {
+    nav.classList.add("fixed-nav");
+    // scrollTopBtn.style.visibility = "visible";
+    scrollTopBtn.classList.add("show-link");
+  } else {
+    nav.classList.remove("fixed-nav");
+    // scrollTopBtn.style.visibility = "hidden";
+    scrollTopBtn.classList.remove("show-link");
+  }
+  if (scroll < 10) {
+    nav.classList.remove("fixed-nav");
+  }
+});
