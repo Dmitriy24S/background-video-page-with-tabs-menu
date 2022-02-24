@@ -227,6 +227,8 @@ header {
 h1 {
   color: var(--clr-white);
   z-index: 1000;
+  -ms-user-select: none;
+  -webkit-user-select: none;
   user-select: none;
 }
 .video {
