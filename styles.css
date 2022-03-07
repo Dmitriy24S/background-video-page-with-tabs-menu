@@ -181,6 +181,7 @@ nav {
   text-align: left;
   margin: 0 auto;
   margin-bottom: 4rem;
+  padding: 0 1rem;
 }
 
 /*
@@ -311,9 +312,11 @@ nav {
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
 }
+/*  */
 .fixed-nav .links a {
-  color: var(--clr-grey-1);
+  /* color: var(--clr-grey-1); */
 }
+/*  */
 .fixed-nav .links a:hover {
   color: var(--clr-secondary);
 }
@@ -461,6 +464,7 @@ main {
 .about-container {
   max-width: 24rem;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 .tours-section {
   background: #2d2d46e3;
