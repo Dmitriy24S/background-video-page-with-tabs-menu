@@ -407,6 +407,9 @@ nav {
     padding-bottom: 0.2rem;
     border-bottom: 3px solid white;
   }
+  .fixed-nav .links a {
+    color: var(--clr-grey-5);
+  }
   .fixed-nav .links a:hover {
     border-bottom: 3px solid black;
   }
